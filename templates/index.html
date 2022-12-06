@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Sobat Sholat</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/logo.png') }}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Simple line icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+  </head>
+  <body id="page-top">
+    <!-- Navigation-->
+    <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand"><a href="#page-top">Sobat Sholat</a></li>
+        <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
+        <li class="sidebar-nav-item"><a href="#about">About</a></li>
+        <li class="sidebar-nav-item"><a href="#deteksi">Detection</a></li>
+        <li class="sidebar-nav-item"><a href="#portfolio">Other Features</a></li>
+        <li class="sidebar-nav-item"><a href="#team">Team</a></li>
+      </ul>
+    </nav>
+    <!-- Header-->
+    <header class="masthead d-flex align-items-center">
+      <div class="container px-4 px-lg-5 text-center">
+        <h1 class="mb-1">Sobat Sholat</h1>
+        <h3 class="mb-5"><em>Website untuk mendeteksi gerakan sholat anda!</em></h3>
+        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+      </div>
+    </header>
+    <!-- About-->
+    <section class="content-section bg-light" id="about">
+      <div class="container px-4 px-lg-5 text-center">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-10">
+            <h2>About Our Website!</h2>
+            <p class="lead mb-5">
+              Sholat merupakan rukun Islam kedua, tidak hanya itu sholat juga merupakan tiang agama yang menjadi indikator keagamaan seseorang, barang siapa yang dapat melakukannya dengan baik maka ia dianggap telah menegakkan agama pada
+              dirinya. Tetapi pada kenyataanya masih banyak ditemukan orang Islam yang salah dalam melakukan gerakan sholat dan tidak sesuai dengan yang Rasulullah SAW contohkan.
+              <br /><br />
+              Pada penelitian ini peneliti membuat pendeteksi kesempurnaan sholat berbasis web. Dimana proses pengambilan data dilakukan secara manual menggunakan alat bantu kamera. Penelitian ini mendeteksi gerakan sholat dengan video yang sebagai dataset-nya. Dengan adanya penelitian ini diharapkan dapat mempermudah seseorang khususnya umat Islam untuk memahami dan membedakan gerakan sholat yang benar dan salah.
+            </p>
+            <a class="btn btn-dark btn-xl" href="#deteksi">Try Our Detection!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Callout-->
+    <section class="callout" id="deteksi">
+      <div class="container px-4 px-lg-5 text-center">
+        <h2 class="mx-auto mb-5">
+          Coba Fitur Deteksi Sholat Kami!
+        </h2>
+        <button class="btn btn-primary btn-xl" onclick="deteksi()" >Coba Sekarang!</button>
+      </div>
+      <div class="container-fluid my-5" id="video" style="display: none;">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2" id="hasil">
+            <!-- <img src= "{{ url_for('video_feed') }}" width="100%" /> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio-->
+    <section class="content-section" id="portfolio">
+      <div class="container px-4 px-lg-5">
+        <div class="content-section-heading text-center">
+          <h3 class="text-secondary mb-0">Fitur</h3>
+          <h2 class="mb-5">Seputar Islam</h2>
+        </div>
+        <div class="row gx-0">
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="https://hidayatullah.com/">
+              <div class="caption">
+                <div class="caption-content">
+                  <div class="h2">Berita</div>
+                  <p class="mb-0">Info Terbaru Seputar Islam!</p>
+                </div>
+              </div>
+              <img class="img-fluid" src="static/img/portfolio-1.png" alt="..." />
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="https://katadata.co.id/safrezi/berita/619b928948aa5/82-kata-kata-motivasi-islami-untuk-semangat-menjalani-hidup">
+              <div class="caption">
+                <div class="caption-content">
+                  <div class="h2">Quotes</div>
+                  <p class="mb-0">Tenangkan Pikiran Dengan Quotes Islami!</p>
+                </div>
+              </div>
+              <img class="img-fluid" src="static/img/portfolio-2.png" alt="..." />
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="https://www.jadwalsholat.org/">
+              <div class="caption">
+                <div class="caption-content">
+                  <div class="h2">Jadwal Sholat</div>
+                  <p class="mb-0">Sholat Tepat Waktu Berdasarkan Daerahmu!</p>
+                </div>
+              </div>
+              <img class="img-fluid" src="static/img/portfolio-3.png" alt="..." />
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-item" href="https://quran.kemenag.go.id/">
+              <div class="caption">
+                <div class="caption-content">
+                  <div class="h2">Al-Quran</div>
+                  <p class="mb-0">Potongan Ayat Suci Al-Quran Beserta Maknanya.</p>
+                </div>
+              </div>
+              <img class="img-fluid" src="static/img/portfolio-4.png" alt="..." />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services-->
+    <section class="content-section bg-primary text-white text-center" id="team">
+      <div class="container px-4 px-lg-5">
+        <div class="content-section-heading">
+          <h3 class="text-secondary mb-0">Team</h3>
+          <h2 class="mb-5">Sturktur Anggota</h2>
+        </div>
+        <div class="row gx-4 gx-lg-5">
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3"><img class="service-icon rounded-circle mx-auto mb-3" src="static/img/Team/raihan.png" alt="Raihan Aris Darmawan"></span>
+            <h4><strong>Raihan Aris Darmawan</strong></h4>
+            <p class="text-faded mb-0">Universitas Dian Nuswantoro</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3"><img class="service-icon rounded-circle mx-auto mb-3" src="static/img/Team/wisnu.png" alt="Azzuhri Wisnu Akhsan"></span>
+            <h4><strong>Azzuhri Wisnu Akhsan</strong></h4>
+            <p class="text-faded mb-0">Universitas Dian Nuswantoro</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+            <span class="service-icon rounded-circle mx-auto mb-3"><img class="service-icon rounded-circle mx-auto mb-3" src="static/img/Team/odelia.png" alt="Odelia Ramadhani"></span>
+            <h4><strong>Odelia Ramadhani</strong></h4>
+            <p class="text-faded mb-0">Institut Teknologi Telkom Purwokerto</p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <span class="service-icon rounded-circle mx-auto mb-3"><img class="service-icon rounded-circle mx-auto mb-3" src="static/img/Team/elisabeth.png" alt="Elisabeth Rambu Mura"></span>
+            <h4><strong>Elisabeth Rambu Mura</strong></h4>
+            <p class="text-faded mb-0">Universitas Wisnuwardhana</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer text-center">
+      <div class="container px-4 px-lg-5">
+        <ul class="list-inline mb-5">
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="https://www.facebook.com/orbitfutureacademy/"><i class="icon-social-facebook"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white mr-3" href="https://twitter.com/orbitacademyid"><i class="icon-social-twitter"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white" href="https://www.instagram.com/poweracademy_/"><i class="icon-social-instagram"></i></a>
+          </li>
+        </ul>
+        <p class="text-muted small mb-0">Copyright &copy; Kelompok III Beta AI4S Template By Bootstrap</p>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </body>
+</html>
